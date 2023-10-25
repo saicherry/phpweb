@@ -103,5 +103,24 @@ echo "<br/>";
 $empManager->showInfo();
 
 
+?>
 
+
+
+<?php 
+
+abstract class firstClass{
+  public $name;
+
+  abstract protected function show($a,$b);
+}
+
+class secondclass extends firstClass{
+  function show($c,$d){
+    echo $c + $d;
+ }
+}
+$test = new secondclass();
+
+$test->show(2,8);
 ?>
