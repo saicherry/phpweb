@@ -9,6 +9,10 @@ class calculation
     $this->name = $name;
     $this->age = $age;
   }
+
+  function show(){
+    echo "Name & Age : ".$this->name." - ".$this->age."!";
+  }
   function sum(){
     $this->c = $this->a + $this->b;
     return $this->c;
@@ -22,9 +26,10 @@ class calculation
 
 }
 
+$c5 = new calculation("sai",29);
 $c1 = new calculation();
-$c1->name = "saicarhsan";
-$c1->age = 25;
+// $c1->name = "saicharan";
+// $c1->age = 25;
 $c1->a = 20;
 $c1->b = 35;
 echo "Sum of it : " . $c1->sum();
@@ -36,7 +41,7 @@ $c4->b = 50;
 echo "Diff of it : " . $c4->sub(); 
 echo "<br/>";
 
-echo "Name & Age : " . $c1->name . " - " . $c1->age;
+echo $c5->show();
 
 
 ?>
