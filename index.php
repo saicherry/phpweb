@@ -41,7 +41,67 @@ $c4->b = 50;
 echo "Diff of it : " . $c4->sub(); 
 echo "<br/>";
 
-echo $c5->show();
+$c5->show();
+
+
+
+
+class employee{
+  public $name,$age,$salary;
+  public function __construct($n,$a,$s){
+    $this->name = $n;
+    $this->age = $a;
+    $this->salary = $s;
+  }
+
+  function showInfo(){
+   echo "<table border='2'>";
+    echo "<th>Employee Profile</th>";
+    echo "<tr><td>$this->name</td></tr>";
+    echo "<tr><td>$this->age</td></tr>";
+    echo "<tr><td>$this->salary</td></tr>";
+    echo "</table>"."";
+   // echo "".$this->name." - ".$this->age." - " .$this->salary;
+  }
+}
+
+
+class manager extends employee{
+  public $department,$company,$location;
+
+  public function __construct($n,$a,$s,$d,$c,$l){
+    $this->name = $n;
+    $this->age = $a;
+    $this->salary = $s;
+    $this->department = $d;
+    $this->company = $c;
+    $this->location = $l;
+  }
+
+  public function showInfo(){
+    
+    echo "<table border='2'>";
+    echo "<th>Manager Profile</th>";
+    echo "<tr><td>$this->name</td></tr>";
+    echo "<tr><td>$this->age</td></tr>";
+    echo "<tr><td>$this->salary</td></tr>";
+    echo "<tr><td>$this->department</td></tr>";
+    echo "<tr><td>$this->company</td></tr>";
+    echo "<tr><td>$this->location</td></tr>";
+    echo "</table>"; 
+   }
+}
+
+
+
+$emp = new employee("saicharan",25,25050);
+$empManager = new manager("sai",26,58426,"HR","FUNBERRY","BANGALORE");
+echo "<br/>";
+$emp->showInfo();
+echo "<br/>";
+
+$empManager->showInfo();
+
 
 
 ?>
