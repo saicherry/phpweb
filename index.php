@@ -123,4 +123,39 @@ class secondclass extends firstClass{
 $test = new secondclass();
 
 $test->show(2,8);
+
+
+
+
+
+interface myFirstinterface{
+  function myaddfunc($a,$b);
+}
+
+interface mySecondinterface{
+  function mysubfunc($c,$d);
+}
+
+class myInterfaceClass{
+  public function myaddfunc($a,$b){
+    echo $a + $b;
+  }
+ 
+  public function mysubfunc($c,$d){
+    echo $c - $d;
+  }
+}
+
+$myinterfaceobj = new myInterfaceClass();
+echo "<br>";
+$myinterfaceobj->myaddfunc(82,18);
+echo "<br>";
+$myinterfaceobj->mysubfunc(100,190);
+
+
+
+
+
+
+
 ?>
